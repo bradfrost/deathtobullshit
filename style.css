@@ -48,9 +48,30 @@ blockquote {
 }
 
 /* Posts */
+.posts {
+	position: relative;
+}
+
 .post {
-	overflow: hidden;
 	padding: 3rem 0 3rem;
+	position: relative;
+}
+
+.ad {
+	position: absolute;
+	width: 217px;
+	height: 150px;
+	background: yellow;
+	left: -300px;
+}
+.ad img {
+	max-width: 100%;
+	width: 100%;
+}
+
+.ad-2 {
+	right: -300px;
+	left: auto;
 }
 
 .post-meta {
@@ -85,5 +106,14 @@ blockquote {
 
 #tumblr_controls {
 	display:none;
+}
+
+#position {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: yellow;
+	width: 200px;
+	height: 30px;
 }
 
