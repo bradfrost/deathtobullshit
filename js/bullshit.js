@@ -23,9 +23,8 @@ function runParallax() {
 	console.log("I'm running parallax. I suck.");
 }
 
-var positionContainer = document.getElementById("position");
 window.onscroll = function() {
-	positionContainer.innerHTML = window.pageYOffset;
+	console.log(window.pageYOffset);
 }
 //Parallax script
 var s = skrollr.init();
