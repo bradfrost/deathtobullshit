@@ -58,6 +58,7 @@ blockquote {
 }
 
 .ad {
+	background: salmon;
 	position: absolute;
 	width: 217px;
 	height: 150px;

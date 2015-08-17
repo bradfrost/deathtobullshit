@@ -25,7 +25,20 @@ bullshitButton.addEventListener("click", function(event){
 })
 
 function runParallax() {
-	console.log("I'm running parallax. I suck.");
+	var posts = document.querySelectorAll('.post');
+	for (i = 0; i < posts.length; ++i) {
+		var ad = document.createElement('div');
+		ad.setAttribute("data-top-bottom","transform:translateY(0px)");
+		ad.setAttribute("data-center","transform:translateY(400px)");
+		if (i % 2 === 0) {
+			ad.className = 'ad';
+		}
+		else {
+			ad.className = 'ad ad-2';
+		}
+		posts[i].appendChild(ad);
+	}
+		var s = skrollr.init();
 }
 
 /* window.onscroll = function() {
@@ -48,9 +61,6 @@ function killSocial() {
 		social[i].remove(social);
 	}
 }
-
-//Parallax script
-var s = skrollr.init();
 
 
 
