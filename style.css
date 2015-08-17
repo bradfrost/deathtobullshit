@@ -122,7 +122,7 @@ blockquote {
 
 .bullshit {
 	font-family: Helvetica, sans-serif;
-	background: url("images/amazonwrapper.jpg") no-repeat 50% 113px #000;
+	background: url("images/amazonwrapper.jpg") no-repeat 50% 88px #000;
 	color: white;
 	margin-top: 145px;
 }
@@ -141,6 +141,7 @@ blockquote {
 }
 
 .bullshit h1 {
+	font-size: 1.4em;
 	margin: 0;
 }
 
