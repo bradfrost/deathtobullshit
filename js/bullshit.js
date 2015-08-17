@@ -21,6 +21,7 @@ bullshitButton.addEventListener("click", function(event){
 		console.log("Good work.");
 		event.target.innerHTML = "Turn bullshit on?";
 		killSocial();
+		killParallax();
 	}
 })
 
@@ -39,6 +40,13 @@ function runParallax() {
 		posts[i].appendChild(ad);
 	}
 		var s = skrollr.init();
+}
+
+function killParallax() {
+	var ad = document.querySelectorAll('.ad');
+	for (i = 0; i < ad.length; ++i) {
+		ad[i].remove(ad);
+	}
 }
 
 /* window.onscroll = function() {
