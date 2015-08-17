@@ -74,6 +74,13 @@ blockquote {
 	left: auto;
 }
 
+.social {
+	margin-top: 20px;
+	background: url("images/socialmedia.png") no-repeat;
+	height: 40px;
+		
+}
+
 .post-meta {
 	overflow: hidden;
 }
