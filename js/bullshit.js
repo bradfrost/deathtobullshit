@@ -1,6 +1,18 @@
 
 var bullshitButton = document.getElementById("bullshitbutton");
 var bullshitMode = false;
+var adImages = [
+	"cats.png",
+	"celebcrimes.png",
+	"childstars.png",
+	"mortgageguy.png",
+	"guyfieri.png",
+	"oldwoman.jpg",
+	"trump.png",
+	"jaw.png"
+	
+];
+	
 bullshitButton.addEventListener("click", function(event){
 	if(bullshitMode === false){
 		// Turn bullshit on
@@ -41,6 +53,9 @@ function runParallax() {
 		var ad = document.createElement('div');
 		ad.setAttribute("data-top-bottom","transform:translateY(0px)");
 		ad.setAttribute("data-center","transform:translateY(400px)");
+		var img = document.createElement("img");
+		img.setAttribute("src","images/" + adImages[getRandomInt(0,7)]);
+		ad.appendChild(img)
 		if (i % 2 === 0) {
 			ad.className = 'ad';
 		}
@@ -78,6 +93,10 @@ function killSocial() {
 	for (i = 0; i < social.length; ++i){
 		social[i].remove(social);
 	}
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 

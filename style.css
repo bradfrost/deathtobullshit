@@ -58,11 +58,10 @@ blockquote {
 }
 
 .ad {
-	background: salmon;
 	position: absolute;
-	width: 217px;
-	height: 150px;
-	left: -300px;
+	width: 300px;
+	height: 250px;
+	left: -325px;
 }
 .ad img {
 	max-width: 100%;
@@ -70,7 +69,7 @@ blockquote {
 }
 
 .ad-2 {
-	right: -300px;
+	right: -325px;
 	left: auto;
 }
 
@@ -78,7 +77,6 @@ blockquote {
 	margin-top: 20px;
 	background: url("images/socialmedia.png") no-repeat;
 	height: 40px;
-		
 }
 
 .post-meta {
