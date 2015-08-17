@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
 	font-size: 1.1rem;
 	text-align: left;
@@ -115,6 +122,25 @@ blockquote {
 
 .bullshit {
 	font-family: Helvetica, sans-serif;
-	background: aqua;
+	background: url("images/amazonwrapper.jpg") no-repeat 50% 113px #000;
+	color: white;
+	margin-top: 145px;
+}
+.bullshit a {
+	color: white;
+}
+
+.bullshit header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	background-color: #e64404;
+	padding: 1em;
+}
+
+.bullshit h1 {
+	margin: 0;
 }
 

@@ -1,6 +1,7 @@
 
 var bullshitButton = document.getElementById("bullshitbutton");
 var bullshitMode = false;
+var s = false;
 var adImages = [
 	"cats.png",
 	"celebcrimes.png",
@@ -54,7 +55,7 @@ function runParallax() {
 		ad.setAttribute("data-top-bottom","transform:translateY(0px)");
 		ad.setAttribute("data-center","transform:translateY(400px)");
 		var img = document.createElement("img");
-		img.setAttribute("src","images/" + adImages[getRandomInt(0,7)]);
+		img.setAttribute("src","images/ads/" + adImages[getRandomInt(0,7)]);
 		ad.appendChild(img)
 		if (i % 2 === 0) {
 			ad.className = 'ad';
@@ -64,7 +65,7 @@ function runParallax() {
 		}
 		posts[i].appendChild(ad);
 	}
-		var s = skrollr.init();
+		s = skrollr.init();
 }
 
 function killParallax() {
@@ -72,6 +73,7 @@ function killParallax() {
 	for (i = 0; i < ad.length; ++i) {
 		ad[i].remove(ad);
 	}
+		s.destroy();
 }
 
 /* window.onscroll = function() {
