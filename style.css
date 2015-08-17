@@ -61,7 +61,6 @@ blockquote {
 	position: absolute;
 	width: 217px;
 	height: 150px;
-	background: yellow;
 	left: -300px;
 }
 .ad img {
@@ -119,7 +118,6 @@ blockquote {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	background: yellow;
 	width: 200px;
 	height: 30px;
 }
