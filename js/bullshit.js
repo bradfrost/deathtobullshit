@@ -9,6 +9,7 @@ bullshitButton.addEventListener("click", function(event){
 			event.target.innerHTML = "Please turn this bullshit off!";
 			runParallax();
 			runSocial();
+			switchBodyBullshit();
 		}
 		else {
 			// User selected cancel
@@ -22,8 +23,17 @@ bullshitButton.addEventListener("click", function(event){
 		event.target.innerHTML = "Turn bullshit on?";
 		killSocial();
 		killParallax();
+		killBodyBullshit();
 	}
 })
+
+function switchBodyBullshit() {
+	document.body.className = "bullshit";
+}
+
+function killBodyBullshit() {
+	document.body.className = "";
+}
 
 function runParallax() {
 	var posts = document.querySelectorAll('.post');
