@@ -120,11 +120,27 @@ blockquote {
 	display:none;
 }
 
+.floater {
+	display: none;
+}
+
+.popup {
+	display: none;
+}
+
+.popup.hidden {
+	display: none;
+}
+
 .bullshit {
 	font-family: 'Lobster', sans-serif;
 	background: url("images/amazonwrapper.jpg") no-repeat 50% 88px #000;
 	color: white;
 	margin-top: 145px;
+}
+
+.bullshit.car {
+	background-image: url("images/carad.jpg");
 }
 .bullshit a {
 	color: white;
@@ -137,6 +153,7 @@ blockquote {
 	z-index: 99;
 	width: 100%;
 	padding: 1em;
+	background: red;
 }
 
 .bullshit h1 {
@@ -148,7 +165,8 @@ blockquote {
 	margin-left: 50px;
 }
 
-.bullshit .floaterimg {
+.bullshit .floater {
+	display: block;
 	position: absolute;
 	margin-left: 300px;
 }
@@ -157,11 +175,11 @@ blockquote {
 	z-index: 999;
 }
 
-.bullshit .popupimg {
-	
-  width: 40%;
-  height: 400px;
-  border-radius: 10px;
+.bullshit .popup-window {
+	background: orange;	
+  	width: 40%;
+  	height: 400px;
+  	border-radius: 10px;
 }
 
 .bullshit .popup {
@@ -177,3 +195,8 @@ blockquote {
 	align-items: center;
 	z-index: 9999;
 }
+
+.bullshit .popup.hidden {
+	display: none;
+}
+

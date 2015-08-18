@@ -26,7 +26,6 @@ bullshitButton.addEventListener("click", function(event){
 			createBannerAd();
 			createFloater();
 			createFooterAd();
-			createPopUp();
 		}
 		else {
 			// User selected cancel
@@ -44,12 +43,14 @@ bullshitButton.addEventListener("click", function(event){
 		killBannerAd();
 		killFloater();
 		killFooterAd();
-		killPopUp();
 	}
 })
 
 function switchBodyBullshit() {
 	document.body.className = "bullshit";
+	if(getRandomInt(1,3) === 2) {
+		document.body.classList.add("car");
+	}
 }
 
 function killBodyBullshit() {
@@ -97,21 +98,6 @@ function killBannerAd() {
 	banner.remove('header');
 }
 
-function createPopUp() {
-	var body = document.querySelector('body');
-	var popupContainer = document.createElement("div");
-	var popupImage = document.createElement("img");
-	popupImage.className = "popupimg";
-	popupContainer.className = "popup";
-	popupImage.setAttribute("src", "images/georgebush.jpg");
-	popupContainer.appendChild(popupImage);
-	body.appendChild(popupContainer); 
-}
-
-function killPopUp() {
-	var popup = document.querySelector(".popupimg");
-	popup.remove();
-}
 
 function createFloater() {
 	var floater = document.querySelector('body');
@@ -164,6 +150,9 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
-
-
+var popupClose = document.querySelector('.popup-close-btn');
+popupClose.addEventListener("click", function(event){
+	alert("Wow you're a racist!")
+	var popup = document.querySelector('.popup');
+	popup.classList.add("hidden");
+});
