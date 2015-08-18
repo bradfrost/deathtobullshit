@@ -25,8 +25,6 @@ bullshitButton.addEventListener("click", function(event){
 			switchBodyBullshit();
 			createBannerAd();
 			createFloater();
-			createFooterAd();
-			createPopUp();
 		}
 		else {
 			// User selected cancel
@@ -43,8 +41,6 @@ bullshitButton.addEventListener("click", function(event){
 		killBodyBullshit();
 		killBannerAd();
 		killFloater();
-		killFooterAd();
-		killPopUp();
 	}
 })
 
@@ -97,24 +93,8 @@ function killBannerAd() {
 	banner.remove('header');
 }
 
-function createPopUp() {
-	var body = document.querySelector('body');
-	var popupContainer = document.createElement("div");
-	var popupImage = document.createElement("img");
-	popupImage.className = "popupimg";
-	popupContainer.className = "popup";
-	popupImage.setAttribute("src", "images/georgebush.jpg");
-	popupContainer.appendChild(popupImage);
-	body.appendChild(popupContainer); 
-}
-
-function killPopUp() {
-	var popup = document.querySelector(".popupimg");
-	popup.remove();
-}
-
 function createFloater() {
-	var floater = document.querySelector('body');
+	var floater= document.querySelector('body');
 	var img = document.createElement("img");
 	img.className = "floaterimg";
 	img.setAttribute("src","images/socialfloater.png");
@@ -124,19 +104,6 @@ function createFloater() {
 function killFloater() {
 	var floater = document.querySelector(".floaterimg");
 	floater.remove();
-}
-
-function createFooterAd() {
-	var footerad = document.querySelector('footer');
-	var img = document.createElement("img");
-	img.className = "footerimg";
-	img.setAttribute("src","images/raisinbran.png");
-	footerad.appendChild(img);
-}
-
-function killFooterAd() {
-	var footerad = document.querySelector('.footerimg');
-	footerad.remove();
 }
 
 /* window.onscroll = function() {
