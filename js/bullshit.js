@@ -23,6 +23,7 @@ bullshitButton.addEventListener("click", function(event){
 			runParallax();
 			runSocial();
 			switchBodyBullshit();
+			createBannerAd();
 		}
 		else {
 			// User selected cancel
@@ -37,6 +38,7 @@ bullshitButton.addEventListener("click", function(event){
 		killSocial();
 		killParallax();
 		killBodyBullshit();
+		killBannerAd();
 	}
 })
 
@@ -74,6 +76,19 @@ function killParallax() {
 		ad[i].remove(ad);
 	}
 		s.destroy();
+}
+
+function createBannerAd() {
+	var banner = document.querySelector('header');
+	var img = document.createElement("img");
+	img.className = "bannerimg";
+	img.setAttribute("src","images/chickfilabanner.png");
+	banner.appendChild(img);	
+}
+
+function killBannerAd() {
+	var banner = document.querySelector(".bannerimg");
+	banner.remove('header');
 }
 
 /* window.onscroll = function() {

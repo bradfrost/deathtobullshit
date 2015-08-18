@@ -121,7 +121,7 @@ blockquote {
 }
 
 .bullshit {
-	font-family: Helvetica, sans-serif;
+	font-family: 'Lobster', sans-serif;
 	background: url("images/amazonwrapper.jpg") no-repeat 50% 88px #000;
 	color: white;
 	margin-top: 145px;
@@ -136,7 +136,6 @@ blockquote {
 	left: 0;
 	z-index: 999;
 	width: 100%;
-	background-color: #e64404;
 	padding: 1em;
 }
 
