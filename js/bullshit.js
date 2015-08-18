@@ -57,7 +57,7 @@ function runParallax() {
 		ad.setAttribute("data-top-bottom","transform:translateY(0px)");
 		ad.setAttribute("data-center","transform:translateY(400px)");
 		var img = document.createElement("img");
-		img.setAttribute("src","images/ads/" + adImages[getRandomInt(0,7)]);
+		img.setAttribute("src","http://deathtobullshit.com/images/ads/" + adImages[getRandomInt(0,7)]);
 		ad.appendChild(img)
 		if (i % 2 === 0) {
 			ad.className = 'ad';
