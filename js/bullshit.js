@@ -113,7 +113,7 @@ function checkFloater() {
 }
 
 function createFooterAd() {
-	var footerad = document.querySelector('footer');
+	var footerad = document.querySelector('footer[role=contentinfo]');
 	var img = document.createElement("img");
 	img.className = "footerimg";
 	img.setAttribute("src", domain + "/images/raisinbran.png");
