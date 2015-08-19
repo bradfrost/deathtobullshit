@@ -25,7 +25,6 @@ bullshitButton.addEventListener("click", function(event){
 			runSocial();
 			switchBodyBullshit();
 			createBannerAd();
-			createFloater();
 			createFooterAd();
 		}
 		else {
@@ -42,7 +41,6 @@ bullshitButton.addEventListener("click", function(event){
 		killParallax();
 		killBodyBullshit();
 		killBannerAd();
-		killFloater();
 		killFooterAd();
 	}
 })
@@ -101,17 +99,17 @@ function killBannerAd() {
 }
 
 
-function createFloater() {
-	var floater = document.querySelector('body');
-	var img = document.createElement("img");
-	img.className = "floaterimg";
-	img.setAttribute("src", domain + "/images/socialfloater.png");
-	floater.appendChild(img);
-}
-
-function killFloater() {
-	var floater = document.querySelector(".floaterimg");
-	floater.remove();
+function checkFloater() {
+	var ypos = window.pageYOffset;
+	var floater = document.querySelector(".floater");
+	if (ypos > 500) {
+		floater.classList.add("active");
+	}
+	
+	else {
+		floater.classList.remove("active");
+	}
+	console.log(ypos);
 }
 
 function createFooterAd() {
@@ -127,9 +125,9 @@ function killFooterAd() {
 	footerad.remove();
 }
 
-/* window.onscroll = function() {
-	 console.log(window.pageYOffset); 
-} */
+window.onscroll = function() {
+	checkFloater(); 
+}
 
 function runSocial() {
 	var posts = document.querySelectorAll('.post');
