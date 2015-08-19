@@ -176,8 +176,16 @@ blockquote {
 
 .bullshit .floater {
 	display: block;
-	position: absolute;
-	margin-left: 300px;
+	position: fixed;
+	bottom: 0;
+	right: 20%;
+	background: #fff;
+	color: #000;
+	padding: 1em;
+}
+
+.bullshit .floater a {
+	color: #000;
 }
 
 .bullshit .footerimg {
