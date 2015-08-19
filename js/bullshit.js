@@ -116,7 +116,7 @@ function createFooterAd() {
 	var footerad = document.querySelector('footer');
 	var img = document.createElement("img");
 	img.className = "footerimg";
-	img.setAttribute("src", domain + "images/raisinbran.png");
+	img.setAttribute("src", domain + "/images/raisinbran.png");
 	footerad.appendChild(img);
 }
 
