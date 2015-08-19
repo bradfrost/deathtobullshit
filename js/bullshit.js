@@ -1,5 +1,6 @@
 
 var bullshitButton = document.getElementById("bullshitbutton");
+var domain = "http://deathtobullshit.com";
 var bullshitMode = false;
 var s = false;
 var adImages = [
@@ -64,7 +65,7 @@ function runParallax() {
 		ad.setAttribute("data-top-bottom","transform:translateY(0px)");
 		ad.setAttribute("data-center","transform:translateY(400px)");
 		var img = document.createElement("img");
-		img.setAttribute("src","http://deathtobullshit.com/images/ads/" + adImages[getRandomInt(0,7)]);
+		img.setAttribute("src", domain + "/images/ads/" + adImages[getRandomInt(0,7)]);
 		ad.appendChild(img)
 		if (i % 2 === 0) {
 			ad.className = 'ad';
@@ -89,7 +90,7 @@ function createBannerAd() {
 	var banner = document.querySelector('header');
 	var img = document.createElement("img");
 	img.className = "bannerimg";
-	img.setAttribute("src","images/chickfilabanner.png");
+	img.setAttribute("src", domain + "/images/chickfilabanner.png");
 	var h1 = document.getElementById('logo');
 	banner.insertBefore(img, h1);	
 }
@@ -104,7 +105,7 @@ function createFloater() {
 	var floater = document.querySelector('body');
 	var img = document.createElement("img");
 	img.className = "floaterimg";
-	img.setAttribute("src","images/socialfloater.png");
+	img.setAttribute("src", domain + "/images/socialfloater.png");
 	floater.appendChild(img);
 }
 
@@ -117,7 +118,7 @@ function createFooterAd() {
 	var footerad = document.querySelector('footer');
 	var img = document.createElement("img");
 	img.className = "footerimg";
-	img.setAttribute("src","images/raisinbran.png");
+	img.setAttribute("src", domain + "images/raisinbran.png");
 	footerad.appendChild(img);
 }
 
