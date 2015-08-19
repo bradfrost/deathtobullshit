@@ -90,7 +90,8 @@ function createBannerAd() {
 	var img = document.createElement("img");
 	img.className = "bannerimg";
 	img.setAttribute("src","images/chickfilabanner.png");
-	banner.appendChild(img);	
+	var h1 = document.getElementById('logo');
+	banner.insertBefore(img, h1);	
 }
 
 function killBannerAd() {
