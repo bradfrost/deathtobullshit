@@ -124,9 +124,19 @@ function killFooterAd() {
 	footerad.remove();
 }
 
+var didScroll = false;
+
 window.onscroll = function() {
-	checkFloater(); 
+	didScroll = true;
+	
 }
+
+setInterval(function() {
+    if (didScroll) {
+        didScroll = false;
+        checkFloater(); 
+    }
+}, 250);
 
 function runSocial() {
 	var posts = document.querySelectorAll('.post');
