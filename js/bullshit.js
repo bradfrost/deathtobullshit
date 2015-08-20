@@ -152,7 +152,14 @@ function getRandomInt(min, max) {
 
 var popupClose = document.querySelector('.popup-close-btn');
 popupClose.addEventListener("click", function(event){
-	alert("Wow you're a racist!")
+	alert("Wow you're a racist!");
+	var popup = document.querySelector('.popup');
+	popup.classList.add("hidden");
+});
+
+var popupLike = document.querySelector('.like-btn');
+popupLike.addEventListener("click", function(event){
+	alert("Whew! For a minute there we thought you were a racist!");
 	var popup = document.querySelector('.popup');
 	popup.classList.add("hidden");
 });
