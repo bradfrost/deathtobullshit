@@ -16,7 +16,7 @@ body {
 	}
 }
 
-img, object, video, iframe {
+img, object, video {
 	max-width: 100%;
 	height: auto;
 }
@@ -24,6 +24,11 @@ img, object, video, iframe {
 iframe {
 	max-width: 100% !important;
 	width: 100% !important;
+}
+
+.tumblr_video_container {
+	width: auto !important;
+	max-width: 100% !important;
 }
 
 blockquote {
