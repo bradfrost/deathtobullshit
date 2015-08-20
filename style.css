@@ -150,6 +150,7 @@ blockquote {
 
 .bullshit.car {
 	background-image: url("images/carad.jpg");
+	background-attachment: fixed;
 }
 .bullshit a {
 	color: white;
