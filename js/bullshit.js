@@ -21,11 +21,12 @@ bullshitButton.addEventListener("click", function(event){
 		if (confirm("Are you sure you want to see ALL of the bullshit?!")) {
 			bullshitMode = true;
 			event.target.innerHTML = "Please turn this bullshit off!";
-			runParallax();
+			createAdImages();
 			runSocial();
 			switchBodyBullshit();
 			createBannerAd();
 			createFooterAd();
+			checkParallax();
 		}
 		else {
 			// User selected cancel
@@ -37,6 +38,7 @@ bullshitButton.addEventListener("click", function(event){
 		bullshitMode = false;
 		console.log("Good work.");
 		event.target.innerHTML = "Turn bullshit on?";
+		killAdImages();
 		killSocial();
 		killParallax();
 		killBodyBullshit();
@@ -56,7 +58,7 @@ function killBodyBullshit() {
 	document.body.className = "";
 }
 
-function runParallax() {
+function createAdImages(){
 	var posts = document.querySelectorAll('.post');
 	for (i = 0; i < posts.length; ++i) {
 		var ad = document.createElement('div');
@@ -73,16 +75,39 @@ function runParallax() {
 		}
 		posts[i].appendChild(ad);
 	}
-		s = skrollr.init();
+	
 }
 
-function killParallax() {
+function killAdImages(){
 	var ad = document.querySelectorAll('.ad');
 	for (i = 0; i < ad.length; ++i) {
 		ad[i].remove(ad);
 	}
-		s.destroy();
+	
 }
+
+function checkParallax(){
+	if (window.matchMedia("(min-width: 1200px)").matches) {
+		if (s===false){
+			runParallax();
+		}
+	} 
+	
+	else {
+		killParallax();
+	}
+}
+
+function runParallax() {
+	s = skrollr.init();
+}
+	
+function killParallax() {
+	s.destroy();
+	s = false;
+}
+
+
 
 function createBannerAd() {
 	var banner = document.querySelector('header');
@@ -137,6 +162,11 @@ setInterval(function() {
         checkFloater(); 
     }
 }, 250);
+
+window.onresize = function() {
+	checkParallax();
+}
+
 
 function runSocial() {
 	var posts = document.querySelectorAll('.post');
