@@ -74,20 +74,24 @@ blockquote {
 	position: relative;
 }
 
-.ad {
-	position: absolute;
-	width: 300px;
-	height: 250px;
-	left: -325px;
-}
-.ad img {
-	max-width: 100%;
-	width: 100%;
-}
+@media all and (min-width: 1200px) {
+	
+	.ad {
+		position: absolute;
+		width: 300px;
+		height: 250px;
+		left: -325px;
+	}
+	.ad img {
+		max-width: 100%;
+		width: 100%;
+	}
 
-.ad-2 {
-	right: -325px;
-	left: auto;
+	.ad-2 {
+		right: -325px;
+		left: auto;
+	}
+
 }
 
 .social {
