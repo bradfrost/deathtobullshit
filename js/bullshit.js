@@ -103,8 +103,10 @@ function runParallax() {
 }
 	
 function killParallax() {
-	s.destroy();
-	s = false;
+	if (s!==false) {
+		s.destroy();
+		s = false;
+	}
 }
 
 
