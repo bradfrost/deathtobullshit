@@ -130,6 +130,10 @@ blockquote {
 	display:none;
 }
 
+.feedback-btn {
+	visibility: hidden;
+}
+
 .floater {
 	display: none;
 }
@@ -189,21 +193,61 @@ blockquote {
 	max-width: 40rem;
 }
 
+.bullshit .feedback-btn a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #fff;
+	display: block;
+	float: right;
+	right: -320px;
+	top: 234px;
+	font-family: Helvetica, Arial, sans-serif;  
+	z-index: 999999;
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+	position: fixed;
+	padding: 1em;
+	border-radius: 0px 0px 10px 10px;
+	background-color: #666666;
+	box-shadow: 0px 6px 21px 14px rgba(0,0,0,0.75);
+	transition: padding-top 0.2s ease-out;
+}
+
+@media all and (min-width: 740px) {
+	.bullshit .feedback-btn a {
+		visibility: visible;	
+	}
+}
+
+.bullshit .feedback-btn a:hover {
+	padding-top:1.3em;
+}
+
+
 .bullshit .floater {
 	display: block;
 	position: fixed;
 	bottom: -180px;
-	right: 5%;
-	background: #fff;
+	right: 0%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.9);
 	color: #000;
 	padding: 1em;
 	border-radius: 10px 10px 0px 0px;
 	transition: bottom 2s ease-out;
+	visibility: hidden;
 }
 
 @media all and (min-width: 410px) {
 	.bullshit .floater {
+		visibility: visible;
+	}
+}
+
+@media all and (min-width: 490px) {
+	.bullshit .floater {
 		right: 20%;
+		width: auto;
 	}
 }
 

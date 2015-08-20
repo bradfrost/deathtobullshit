@@ -109,7 +109,6 @@ function checkFloater() {
 	else {
 		floater.classList.remove("active");
 	}
-	console.log(ypos);
 }
 
 function createFooterAd() {
@@ -163,3 +162,8 @@ popupLike.addEventListener("click", function(event){
 	var popup = document.querySelector('.popup');
 	popup.classList.add("hidden");
 });
+
+var feedback = document.querySelector('.feedback-btn');
+feedback.addEventListener("click", function(event){
+	alert("We knew you had plenty of time to give us feedback!");
+})
