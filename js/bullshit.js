@@ -11,8 +11,12 @@ var adImages = [
 	"guyfieri.png",
 	"oldwoman.jpg",
 	"trump.png",
-	"jaw.png"
-	
+	"jaw.png",
+	"glasses.png",
+	"one-weird-trick.png",
+	"teeth.png",
+	"coffee.png",
+	"creepy.png"
 ];
 	
 bullshitButton.addEventListener("click", function(event){
