@@ -16,6 +16,7 @@ var adImages = [
 ];
 	
 bullshitButton.addEventListener("click", function(event){
+	event.preventDefault();
 	if(bullshitMode === false){
 		// Turn bullshit on
 		if (confirm("Are you sure you want to see ALL of the bullshit?!")) {
@@ -193,6 +194,7 @@ function getRandomInt(min, max) {
 
 var popupClose = document.querySelector('.popup-close-btn');
 popupClose.addEventListener("click", function(event){
+	event.preventDefault();
 	alert("Wow you're a racist!");
 	var popup = document.querySelector('.popup');
 	popup.classList.add("hidden");
@@ -200,6 +202,7 @@ popupClose.addEventListener("click", function(event){
 
 var popupLike = document.querySelector('.like-btn');
 popupLike.addEventListener("click", function(event){
+	event.preventDefault();
 	alert("Whew! For a minute there we thought you were a racist!");
 	var popup = document.querySelector('.popup');
 	popup.classList.add("hidden");
@@ -207,5 +210,6 @@ popupLike.addEventListener("click", function(event){
 
 var feedback = document.querySelector('.feedback-btn');
 feedback.addEventListener("click", function(event){
+	event.preventDefault();
 	alert("We knew you had plenty of time to give us feedback!");
 })
