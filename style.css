@@ -162,6 +162,12 @@ blockquote {
 	color: white;
 }
 
+.bullshit a:hover {
+	color: yellow;
+	transition: 0.5s ease-out;
+	
+}
+
 .bullshit header {
 	position: fixed;
 	top: 0;
