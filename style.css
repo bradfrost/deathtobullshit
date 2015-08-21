@@ -275,6 +275,10 @@ transform: scale(1.1, 1.1)
 }
 
 .bullshit .socialshare {
+	display: block;
+}
+
+.bullshit .socialshare-list {
 	display: flex;
 	list-style: none;
 	width: 100%;
@@ -283,7 +287,7 @@ transform: scale(1.1, 1.1)
 	margin: 0;
 }
 
-.bullshit .socialshare a{
+.bullshit .socialshare-list a{
 	display: block;
 	list-style-type: none;
 	color: #000;
@@ -296,26 +300,26 @@ transform: scale(1.1, 1.1)
 }
 
 
-.bullshit .socialshare a.sharetwitter {
+.bullshit .socialshare-list a.sharetwitter {
 	background-position: -3px, 0px;
 }
 
-.bullshit .socialshare a.shareface {
+.bullshit .socialshare-list a.shareface {
 	background-position: -43px, 0px;
 }
 
-.bullshit .socialshare a.sharegplus{
+.bullshit .socialshare-list a.sharegplus{
 	background-position: -83px, 0px;
 }
 
-.bullshit .socialshare a.sharelinkedin {
+.bullshit .socialshare-list a.sharelinkedin {
 	background-position: -123px, 0px;
 }
-.bullshit .socialshare a.sharereddit{
+.bullshit .socialshare-list a.sharereddit{
 	background-position: -163px, 0px;
 }
 
-.bullshit .socialshare a.sharegmail {
+.bullshit .socialshare-list a.sharegmail {
 	background-position: -203px, 0px;
 }
 
@@ -390,6 +394,13 @@ transform: scale(1.1, 1.1)
 		position: static;
 		width: auto;
 	}
+}
+
+.bullshit h3 {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-weight: normal;
 }
 
 .bullshit .popup {
