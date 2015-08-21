@@ -70,7 +70,8 @@ function createAdImages(){
 		ad.setAttribute("data-top-bottom","transform:translateY(0px)");
 		ad.setAttribute("data-center","transform:translateY(400px)");
 		var img = document.createElement("img");
-		img.setAttribute("src", domain + "/images/ads/" + adImages[getRandomInt(0,adImages.length)]);
+		var randomImage = getRandomInt(0,adImages.length);
+		img.setAttribute("src", domain + "/images/ads/" + adImages[randomImage]);
 		ad.appendChild(img)
 		if (i % 2 === 0) {
 			ad.className = 'ad';
