@@ -263,19 +263,23 @@ transform: scale(1.07, 1.07)
 	max-width: 40rem;
 }
 
+@media all and (min-width: 740px) {
+	.bullshit .feedback-btn {
+		visibility: visible;
+		position: fixed;
+		right: -119px;
+		top: 40%;
+		z-index: 999999;
+		transform: rotate(90deg);
+		transform-origin: 50%;
+	}
+}
+
 .bullshit .feedback-btn a {
+	font-size: 16px;
 	text-decoration: none;
-	font-size: 18px;
 	color: #fff;
 	display: block;
-	float: right;
-	right: -320px;
-	top: 234px;
-	font-family: Helvetica, Arial, sans-serif;  
-	z-index: 999999;
-	transform: rotate(90deg);
-	transform-origin: left top 0;
-	position: fixed;
 	padding: 0.7em;
 	border-radius: 0px 0px 10px 10px;
 	background-color: #666666;
@@ -283,14 +287,10 @@ transform: scale(1.07, 1.07)
 	transition: padding-top 0.2s ease-out;
 }
 
-@media all and (min-width: 740px) {
-	.bullshit .feedback-btn a {
-		visibility: visible;	
-	}
-}
+
 
 .bullshit .feedback-btn a:hover {
-	padding-top:1.3em;
+	padding-top:1em;
 }
 
 
