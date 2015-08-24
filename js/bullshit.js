@@ -218,8 +218,6 @@ popupLike.addEventListener("click", function(event){
 
 var feedback = document.querySelector('.feedback-btn');
 feedback.addEventListener("click", function(event){
-	event.preventDefault();
-	alert("We knew you had plenty of time to give us feedback!");
 })
 
 function getDocHeight() {
