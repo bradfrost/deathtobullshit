@@ -98,8 +98,20 @@ blockquote {
 
 }
 
+.ad-grid-container {
+	display: none;
+}
+
 .post-meta {
 	overflow: hidden;
+}
+
+.qr{
+	display: none;
+}
+
+.bullshit .qr .qrimg {
+	padding: 1em;
 }
 
 .socialshare {
@@ -169,7 +181,40 @@ blockquote {
 .bullshit a:hover {
 	color: yellow;
 	transition: 0.5s ease-out;
-	
+}
+
+.bullshit .ad-grid-container {
+	display: block;
+}
+
+.bullshit .g {
+	box-sizing: border-box;
+  	display: flex;
+  	flex-wrap: wrap;
+  	background: #000;
+}
+
+.bullshit .gi img {
+	box-sizing: border-box;
+  	display: block;
+  	width: 100%;  
+}
+
+.bullshit .gi {
+	box-sizing: border-box;
+  	padding: 0.5em;
+}
+
+@media all and (min-width: 30em) {
+  	.bullshit .gi {
+    	width: 50%;
+  	}
+}
+
+@media all and (min-width: 56em) {
+  	.bullshit .gi {
+    	width: 33.33333333%;
+  	}
 }
 
 .bullshit header {
@@ -481,6 +526,10 @@ transform: scale(1.07, 1.07)
 .bullshit .popup p {
 	font-size: 32px;
 	font-weight: bold;
+}
+
+.bullshit .qr {
+	display: block;
 }
 	
 .bullshit .socialshare {

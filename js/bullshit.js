@@ -2,6 +2,7 @@
 var bullshitButton = document.getElementById("bullshitbutton");
 var domain = "http://deathtobullshit.com";
 var bullshitMode = false;
+var creepMode = false;
 var s = false;
 var adImages = [
 	"cats.png",
@@ -32,6 +33,7 @@ bullshitButton.addEventListener("click", function(event){
 			createBannerAd();
 			createFooterAd();
 			checkParallax();
+			createAdGridRow();
 		}
 		else {
 			// User selected cancel
@@ -167,7 +169,8 @@ window.onscroll = function() {
 setInterval(function() {
     if (didScroll) {
         didScroll = false;
-        checkFloater(); 
+        checkFloater();
+        checkAdGrid(); 
     }
 }, 250);
 
@@ -218,3 +221,36 @@ feedback.addEventListener("click", function(event){
 	event.preventDefault();
 	alert("We knew you had plenty of time to give us feedback!");
 })
+
+function createAdGridRow() {
+	var mayLikeStories = document.querySelector('.g');
+	for (i=0; i<3; ++i){
+		var gi = document.createElement('div');
+		var randomImage = getRandomInt(0,adImages.length);
+		gi.className = "gi";
+		var img = document.createElement("img");
+		if (creepMode){
+			var imgsrc = "creepy.png";
+		}
+		else {
+			var imgsrc = adImages[randomImage];
+		}
+		img.setAttribute("src", domain + "/images/ads/" + imgsrc);
+		gi.appendChild(img);	
+		mayLikeStories.appendChild(gi);
+	}
+}
+
+function checkAdGrid(){
+	var ypos = window.pageYOffset;
+	var bodyLength = document.documentElement.scrollHeight;
+	console.log(bodyLength);
+	console.log("Current Y-Position: " + ypos);
+	if (ypos >= Math.floor(bodyLength-800)) {
+		createAdGridRow();
+	}
+	if (ypos >10000) {
+		creepMode = true;
+	}
+}
+
