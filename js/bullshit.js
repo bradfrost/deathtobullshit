@@ -222,6 +222,15 @@ feedback.addEventListener("click", function(event){
 	alert("We knew you had plenty of time to give us feedback!");
 })
 
+function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+    );
+}
+
 function createAdGridRow() {
 	var mayLikeStories = document.querySelector('.g');
 	for (i=0; i<3; ++i){
@@ -242,11 +251,11 @@ function createAdGridRow() {
 }
 
 function checkAdGrid(){
-	var ypos = window.pageYOffset;
-	var bodyLength = document.documentElement.scrollHeight;
+	var ypos = window.pageYOffset + window.innerHeight;
+	var bodyLength = getDocHeight();
 	console.log(bodyLength);
 	console.log("Current Y-Position: " + ypos);
-	if (ypos >= Math.floor(bodyLength-800)) {
+	if (ypos >= Math.floor(bodyLength-400)) {
 		createAdGridRow();
 	}
 	if (ypos >10000) {
