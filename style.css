@@ -85,6 +85,11 @@ blockquote {
 	margin: 1em 0;
 }
 
+.ad img {
+	display: block;
+	margin: 0 auto;
+}
+
 @media all and (min-width: 1200px) {
 	
 	.ad {
