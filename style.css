@@ -108,7 +108,7 @@ blockquote {
 
 .ad-grid-container {
 	display: none;
-	max-width: 62%;
+	max-width: 62em;
 	margin: 0 auto;
 }
 
