@@ -183,6 +183,11 @@ blockquote {
 	transition: 0.5s ease-out;
 }
 
+.bullshit .ad-grid-heading {
+	font-size: 22px;
+	text-align: center;
+}
+
 .bullshit .ad-grid-container {
 	display: block;
 }
