@@ -607,8 +607,17 @@ blockquote {
 	margin-top: 3em;
 }
 
+
 .bullshit .qr {
-	display: block;
+	padding: 0.5em;
+	display: -webkit-box;   
+  	display: -webkit-flex;   
+  	display: -ms-flexbox;   
+  	display: flex;
+  	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 	
 .bullshit .socialshare {

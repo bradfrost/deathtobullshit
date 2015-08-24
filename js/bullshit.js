@@ -41,6 +41,7 @@ bullshitButton.addEventListener("click", function(event){
 			createFooterAd();
 			checkParallax();
 			createAdGridRow();
+			createQRCode();
 		}
 		else {
 			// User selected cancel
@@ -267,5 +268,13 @@ function checkAdGrid(){
 	if (count>30) {
 		creepMode = true;
 	}
+}
+
+function createQRCode() {
+	var qr = document.querySelector('.qr');
+	var img = document.createElement("img");
+	img.className = "qrcode";
+	img.setAttribute("src", domain + "/images/qrcode.png");
+	qr.appendChild(img);
 }
 
