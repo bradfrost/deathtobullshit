@@ -255,10 +255,11 @@ function checkAdGrid(){
 	var bodyLength = getDocHeight();
 	console.log(bodyLength);
 	console.log("Current Y-Position: " + ypos);
+	var count = document.querySelectorAll('.ad-grid-container .gi').length;
 	if (ypos >= Math.floor(bodyLength-400)) {
 		createAdGridRow();
 	}
-	if (ypos >10000) {
+	if (count>30) {
 		creepMode = true;
 	}
 }
