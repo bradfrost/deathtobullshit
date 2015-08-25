@@ -20,7 +20,11 @@ var adImages = [
 	"creepy.png",
 	"gas.png",
 	"drink.png",
-	"wrinkles.png"
+	"wrinkles.png",
+	"snore.png",
+	"skin.png",
+	"weight.png",
+	"veggies.png"
 ];
 	
 bullshitButton.addEventListener("click", function(event){
@@ -37,6 +41,7 @@ bullshitButton.addEventListener("click", function(event){
 			createFooterAd();
 			checkParallax();
 			createAdGridRow();
+			createQRCode();
 		}
 		else {
 			// User selected cancel
@@ -126,7 +131,7 @@ function createBannerAd() {
 	var banner = document.querySelector('header');
 	var img = document.createElement("img");
 	img.className = "bannerimg";
-	img.setAttribute("src", domain + "/images/chickfilabanner.png");
+	img.setAttribute("src", domain + "/images/scotttradebanner.png");
 	var h1 = document.getElementById('logo');
 	banner.insertBefore(img, h1);	
 }
@@ -263,5 +268,13 @@ function checkAdGrid(){
 	if (count>30) {
 		creepMode = true;
 	}
+}
+
+function createQRCode() {
+	var qr = document.querySelector('.qr');
+	var img = document.createElement("img");
+	img.className = "qrcode";
+	img.setAttribute("src", domain + "/images/qrcode.png");
+	qr.appendChild(img);
 }
 

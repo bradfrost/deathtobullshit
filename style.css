@@ -38,6 +38,10 @@ blockquote {
 	margin: 0 1rem 1rem;
 }
 
+.bullshit-switch.right {
+	float: right;
+}
+
 /* Page Structure */
 
 /* Container */
@@ -59,16 +63,42 @@ blockquote {
 	overflow: hidden;
 }
 
+footer {
+	text-align: center;
+}
+
 .left {
-	float: left;
+	float: none;
 	font-size: 15px;
 	font-size: 0.95rem;
+	padding: 0;
+}
+
+@media all and (min-width: 500px) {
+	.left {	
+	float: left;
+	}
 }
 
 .right {
-	float: right;
+	float: none;
 	font-size: 15px;
 	font-size: 0.95rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.right li {
+	display: inline-block;
+	padding: 0;
+}
+
+@media all and (min-width: 500px) {
+	.right li {
+	float: right;
+	margin: 15px 0 0 10px;
+	}
 }
 
 /* Posts */
@@ -77,13 +107,17 @@ blockquote {
 }
 
 .post {
-	padding: 48px 0 48px;
 	padding: 3rem 0 3rem;
 	position: relative;
 }
 
 .ad {
 	margin: 1em 0;
+}
+
+.ad img {
+	display: block;
+	margin: 0 auto;
 }
 
 @media all and (min-width: 1200px) {
@@ -179,7 +213,7 @@ blockquote {
 	background: url("images/amazonwrapper.jpg") no-repeat 50% 88px #000;
 	color: white;
 	margin-top: 145px;
-	background-position-y: 119px;
+	background-position-y: 145px;
 	background-attachment: fixed;
 }
 
@@ -204,9 +238,13 @@ blockquote {
 
 .bullshit .ad-grid-container {
 	display: block;
+	background: white;
+	color: black;
 }
 
 .bullshit .g {
+	padding: 0.5em;
+	background: white;
 	box-sizing: border-box;  
   	display: -webkit-box;  
   	display: -webkit-flex;  
@@ -215,7 +253,6 @@ blockquote {
   	-webkit-flex-wrap: wrap;
   	    -ms-flex-wrap: wrap;
   	        flex-wrap: wrap;
-  	background: #000;
 }
 
 .bullshit .gi img {
@@ -287,7 +324,7 @@ blockquote {
 }
 .bullshit .bannerimg {
 	width: 100%;
-	max-width: 1024px;
+	max-width: 800px;
 	display: block;
 	margin: 0 auto 0.25em auto;
 }
@@ -597,12 +634,26 @@ blockquote {
 	}
 	
 .bullshit .popup p {
+	max-width: 16em;
 	font-size: 32px;
 	font-weight: bold;
 }
 
+.bullshit .posts {
+	margin-top: 3em;
+}
+
+
 .bullshit .qr {
-	display: block;
+	padding: 0.5em;
+	display: -webkit-box;   
+  	display: -webkit-flex;   
+  	display: -ms-flexbox;   
+  	display: flex;
+  	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 	
 .bullshit .socialshare {
