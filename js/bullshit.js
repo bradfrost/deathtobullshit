@@ -131,7 +131,7 @@ function createBannerAd() {
 	var banner = document.querySelector('header');
 	var img = document.createElement("img");
 	img.className = "bannerimg";
-	img.setAttribute("src", domain + "/images/chickfilabanner.png");
+	img.setAttribute("src", domain + "/images/scotttradebanner.png");
 	var h1 = document.getElementById('logo');
 	banner.insertBefore(img, h1);	
 }
