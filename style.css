@@ -183,7 +183,7 @@ blockquote {
 	background: url("images/amazonwrapper.jpg") no-repeat 50% 88px #000;
 	color: white;
 	margin-top: 145px;
-	background-position-y: 119px;
+	background-position-y: 145px;
 	background-attachment: fixed;
 }
 
@@ -294,7 +294,7 @@ blockquote {
 }
 .bullshit .bannerimg {
 	width: 100%;
-	max-width: 1024px;
+	max-width: 800px;
 	display: block;
 	margin: 0 auto 0.25em auto;
 }
