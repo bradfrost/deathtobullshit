@@ -604,6 +604,7 @@ blockquote {
 	}
 	
 .bullshit .popup p {
+	max-width: 16em;
 	font-size: 32px;
 	font-weight: bold;
 }
