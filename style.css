@@ -95,7 +95,7 @@ footer {
 }
 
 @media all and (min-width: 500px) {
-	.right li {
+	.right {
 	float: right;
 	margin: 15px 0 0 10px;
 	}
