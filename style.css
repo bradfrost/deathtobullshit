@@ -221,6 +221,7 @@ footer {
 	background-image: url("images/carad.jpg");
 	background-attachment: fixed;
 }
+
 .bullshit a {
 	color: white;
 }
@@ -229,6 +230,11 @@ footer {
 	color: yellow;
 	-webkit-transition: 0.5s ease-out;
 	        transition: 0.5s ease-out;
+}
+
+.bullshit [role=main] {
+	background: #000;
+	margin-top: 4em;
 }
 
 .bullshit .ad-grid-heading {
@@ -638,11 +644,6 @@ footer {
 	font-size: 32px;
 	font-weight: bold;
 }
-
-.bullshit .posts {
-	margin-top: 3em;
-}
-
 
 .bullshit .qr {
 	padding: 0.5em;
