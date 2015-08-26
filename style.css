@@ -238,6 +238,9 @@ footer .right li {
 	margin: 0;
 	padding: 0;
 	width: 20000px;
+	display: -webkit-box;   
+  	display: -webkit-flex;   
+  	display: -ms-flexbox;  
 	display: flex;
 	position: relative;
 	left: 0;
@@ -247,6 +250,9 @@ footer .right li {
 .carousel-dots {
 	margin: 0;
 	padding: 0;
+	display: -webkit-box;   
+  	display: -webkit-flex;   
+  	display: -ms-flexbox;  
 	display: flex;
 	justify-content: center;
 	height: 12px;
@@ -716,6 +722,11 @@ footer .right li {
 	
 .bullshit .socialshare {
 	display: block;
+}
+
+.bullshit .socialshare h3 {
+	font-size: 14px;
+	font-weight: normal;
 }
 
 .bullshit .socialshare-list {   
