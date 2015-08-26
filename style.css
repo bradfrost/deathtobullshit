@@ -629,6 +629,7 @@ footer[role=contentinfo] .right li {
 .bullshit .like-btn:hover {
 	background: #23355b;
 	top: -3px;
+	color: #fff;
 }
 
 .bullshit .popup {
@@ -655,8 +656,8 @@ footer[role=contentinfo] .right li {
 	visibility:visible;
 	opacity:1;
 	filter: alpha(opacity=100);
-	-webkit-transition-delay:3s;
-	        transition-delay:3s;
+	-webkit-transition-delay: 5s;
+	        transition-delay: 5s;
 }
 
 .bullshit .popup-window {

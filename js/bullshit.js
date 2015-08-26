@@ -187,8 +187,10 @@ function runCarousel() {
 		var leftVal = imgWidth*pos;
 		
 	    carouselList.style.left = "-"+leftVal+"px";
+		
 		for (i=0;i<num;i++) {
 			carouselDots[i].className = "";
+			bannerImgs[i].style.width = imgWidth+"px";
 		}
 		
 		carouselDots[pos].className = "active";
@@ -265,7 +267,7 @@ function getRandomInt(min, max) {
 var popupClose = document.querySelector('.popup-close-btn');
 popupClose.addEventListener("click", function(event){
 	event.preventDefault();
-	alert("Wow you're a racist!");
+	alert("Wow...ok. I can't believe you're brazen enough to actually admit to being a racist. Just...wow.");
 	var popup = document.querySelector('.popup');
 	popup.classList.add("hidden");
 });
