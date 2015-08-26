@@ -38,6 +38,14 @@ blockquote {
 	margin: 0 1rem 1rem;
 }
 
+blockquote cite {
+	display: block;
+}
+
+blockquote cite:before {
+	content: "–";
+}
+
 .bullshit-switch.right {
 	float: right;
 }
