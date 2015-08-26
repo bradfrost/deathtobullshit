@@ -26,14 +26,24 @@ var adImages = [
 	"weight.png",
 	"veggies.png"
 ];
+
+var bannerImages = [
+	"banner-trade.png",
+	"banner-qr.png",
+	"banner-birds.gif",
+	"banner-clothes.gif",
+	"banner-iab.png",
+	"banner-sausage.jpg"
+]
 	
 bullshitButton.addEventListener("click", function(event){
 	event.preventDefault();
 	if(bullshitMode === false){
 		// Turn bullshit on
-		if (confirm("Are you sure you want to see ALL of the bullshit?!")) {
+		if (confirm("Are you sure you want to turn on the bullshit?")) {
 			bullshitMode = true;
-			event.target.innerHTML = "Please turn this bullshit off!";
+			console.log("Don't say we didn't warn you.");
+			event.target.innerHTML = "Turn this bullshit off";
 			createAdImages();
 			runSocial();
 			switchBodyBullshit();
@@ -45,13 +55,12 @@ bullshitButton.addEventListener("click", function(event){
 		}
 		else {
 			// User selected cancel
-			console.log("Thank God");
+			console.log("Smart thinking.");
 		}
 	} 
 	else {
 		// Turn bullshit off
 		bullshitMode = false;
-		console.log("Good work.");
 		event.target.innerHTML = "Turn bullshit on?";
 		killAdImages();
 		killSocial();
@@ -125,20 +134,63 @@ function killParallax() {
 	}
 }
 
-
-
 function createBannerAd() {
 	var banner = document.querySelector('header');
-	var img = document.createElement("img");
-	img.className = "bannerimg";
-	img.setAttribute("src", domain + "/images/scotttradebanner.png");
+	var carousel = document.createElement("div");
+	carousel.className = "carousel";
+	var carouselListContainer = document.createElement("div");
+	carouselListContainer.className = "carousel-list-container";
+	carousel.appendChild(carouselListContainer);
+	var carouselList = document.createElement("ul");
+	carouselList.className = "carousel-list";
+	carouselListContainer.appendChild(carouselList);
+	var dots = document.createElement("ul");
+	dots.className = "carousel-dots";
+	carousel.appendChild(dots);
+	
+	for(i=0;i<5;i++) {
+		var li = document.createElement("li");
+		var img = document.createElement("img");
+		img.setAttribute("src", domain + "/images/"+bannerImages[getRandomInt(0,bannerImages.length)]);
+		li.appendChild(img);
+		carouselList.appendChild(li);
+		var dot = document.createElement("li");
+		dots.appendChild(dot);
+	}
+	
 	var h1 = document.getElementById('logo');
-	banner.insertBefore(img, h1);	
+	banner.insertBefore(carousel,h1);
+	
+	runCarousel();
 }
 
 function killBannerAd() {
-	var banner = document.querySelector(".bannerimg");
+	var banner = document.querySelector(".carousel");
 	banner.remove('header');
+}
+
+function runCarousel() {
+	var carouselList = document.querySelector('.carousel-list'),
+		carouselDots = document.querySelectorAll('.carousel-dots li'),
+		num = carouselDots.length,
+		pos = 0;
+	
+	setInterval(function() {
+		if (pos<(num-1)) {
+			pos++;
+		} else {
+			pos = 0;
+		}
+		
+		var imgWidth = 728;
+		var leftVal = imgWidth*pos;
+	    carouselList.style.left = "-"+leftVal+"px";
+		for (i=0;i<num;i++) {
+			carouselDots[i].className = "";
+		}
+		
+		carouselDots[pos].className = "active";
+	}, 4000);
 }
 
 
@@ -265,7 +317,7 @@ function checkAdGrid(){
 	if (ypos >= Math.floor(bodyLength-400)) {
 		createAdGridRow();
 	}
-	if (count>30) {
+	if (count>40) {
 		creepMode = true;
 	}
 }
