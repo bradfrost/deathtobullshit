@@ -172,6 +172,7 @@ function killBannerAd() {
 function runCarousel() {
 	var carouselList = document.querySelector('.carousel-list'),
 		carouselDots = document.querySelectorAll('.carousel-dots li'),
+		bannerImgs = document.querySelectorAll('.carousel img'),
 		num = carouselDots.length,
 		pos = 0;
 	
@@ -182,8 +183,9 @@ function runCarousel() {
 			pos = 0;
 		}
 		
-		var imgWidth = 728;
+		var imgWidth = document.querySelector('.carousel').offsetWidth;
 		var leftVal = imgWidth*pos;
+		
 	    carouselList.style.left = "-"+leftVal+"px";
 		for (i=0;i<num;i++) {
 			carouselDots[i].className = "";

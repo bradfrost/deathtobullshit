@@ -221,13 +221,18 @@ footer[role=contentinfo] .right li {
 
 .carousel {
 	max-width: 728px;
-	margin: 0 auto;
+	margin: -0.25em -0.25em 0;
 	position: relative;
+}
+
+@media all and (min-width: 728px) {
+	.carousel {
+		margin: 0 auto;
+	}
 }
 
 .carousel-list-container {
 	overflow: hidden;
-	overflow-x: scroll;
 	position: relative;
 }
 
