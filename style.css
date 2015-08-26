@@ -96,6 +96,8 @@ footer[role=contentinfo] .left {
 footer[role=contentinfo] .right {
 	float: none;
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 footer[role=contentinfo] .right li {
@@ -314,10 +316,12 @@ footer[role=contentinfo] .right li {
 	display: block;
 	background: white;
 	color: black;
+	padding: 1rem 0.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 .bullshit .g {
-	padding: 0.5em;
 	background: white;
 	box-sizing: border-box;  
   	display: -webkit-box;  
@@ -325,8 +329,8 @@ footer[role=contentinfo] .right li {
   	display: -ms-flexbox;  
   	display: flex;
   	-webkit-flex-wrap: wrap;
-  	    -ms-flex-wrap: wrap;
-  	        flex-wrap: wrap;
+  	-ms-flex-wrap: wrap;
+  	flex-wrap: wrap;
 }
 
 .bullshit .gi img {
