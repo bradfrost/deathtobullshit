@@ -218,7 +218,59 @@ footer .right li {
   	opacity:0;
   	filter: alpha(opacity=0);
   	-webkit-transition:visibility 0s linear 0.5s,opacity 0.5s linear;
-  	        transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+  	transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+
+.carousel {
+	max-width: 728px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.carousel-list-container {
+	overflow: hidden;
+	overflow-x: scroll;
+	position: relative;
+}
+
+.carousel-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 20000px;
+	display: flex;
+	position: relative;
+	left: 0;
+	transition: left 1s ease-in-out;
+}
+
+.carousel-dots {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	height: 12px;
+	margin: 0.25em auto 0;
+	list-style: none;
+}
+
+.carousel-dots li {
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background: #fff;
+	opacity: 0.5;
+	margin: 0 2px;
+	transition: opacity 1s ease-in-out;
+}
+
+.carousel-dots li.active {
+	opacity: 1;
+}
+
+.carousel img {
+	display: block;
+	max-width: 100vw;
 }
 
 .bullshit {
@@ -341,12 +393,6 @@ footer .right li {
 .bullshit h2 a {
 	text-decoration: none; 
 }
-.bullshit .bannerimg {
-	width: 100%;
-	max-width: 800px;
-	display: block;
-	margin: 0 auto 0.25em auto;
-}
 
 .bullshit .bullshit-switch {
 	background-color: red;
@@ -407,7 +453,7 @@ footer .right li {
 	.bullshit .feedback-btn {
 		visibility: visible;
 		position: fixed;
-		right: -119px;
+		right: -105px;
 		top: 40%;
 		z-index: 999999;
 		-webkit-transform: rotate(90deg);
@@ -552,8 +598,6 @@ footer .right li {
 .bullshit h3 {
 	padding: 0;
 	margin: 0;
-	font-size: 14px;
-	font-weight: normal;
 }
 
 .bullshit .like-btn {
