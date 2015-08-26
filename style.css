@@ -65,13 +65,9 @@ blockquote cite:before {
 	overflow: hidden;
 }
 
-[role=contentinfo] {
-	padding: 32px 0;
+footer[role=contentinfo] {
 	padding: 2rem 0;
 	overflow: hidden;
-}
-
-footer {
 	text-align: center;
 }
 
@@ -81,13 +77,13 @@ footer {
 	font-size: 0.95rem;
 }
 
-footer left {
+footer[role=contentinfo] .left {
 	float: none;
 }
 
 @media all and (min-width: 500px) {
-	footer .left {	
-	float: left;
+	footer[role=contentinfo] .left {	
+		float: left;
 	}
 }
 
@@ -97,20 +93,20 @@ footer left {
 	font-size: 0.95rem;
 }
 
-footer .right {
+footer[role=contentinfo] .right {
 	float: none;
 	list-style: none;
 }
 
-footer .right li {
+footer[role=contentinfo] .right li {
 	display: inline-block;
 	padding: 0;
 }
 
 @media all and (min-width: 500px) {
-	footer .right {
-	float: right;
-	margin: 15px 0 0 10px;
+	footer[role=contentinfo] .right {
+		float: right;
+		margin: 15px 0 0 10px;
 	}
 }
 
