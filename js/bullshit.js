@@ -15,7 +15,7 @@ var adImages = [
 	"jaw.png",
 	"glasses.png",
 	"one-weird-trick.png",
-	"teeth.png",
+	"teeth.jpg",
 	"coffee.png",
 	"creepy.png",
 	"gas.png",
