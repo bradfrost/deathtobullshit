@@ -254,6 +254,7 @@ footer .right li {
   	display: -webkit-flex;   
   	display: -ms-flexbox;  
 	display: flex;
+	-webkit-justify-content: center;
 	justify-content: center;
 	height: 12px;
 	margin: 0.25em auto 0;
