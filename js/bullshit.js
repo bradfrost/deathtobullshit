@@ -311,8 +311,6 @@ function createAdGridRow() {
 function checkAdGrid(){
 	var ypos = window.pageYOffset + window.innerHeight;
 	var bodyLength = getDocHeight();
-	console.log(bodyLength);
-	console.log("Current Y-Position: " + ypos);
 	var count = document.querySelectorAll('.ad-grid-container .gi').length;
 	if (ypos >= Math.floor(bodyLength-400)) {
 		createAdGridRow();
