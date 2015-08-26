@@ -76,34 +76,39 @@ footer {
 }
 
 .left {
-	float: none;
+	float: left;
 	font-size: 15px;
 	font-size: 0.95rem;
-	padding: 0;
+}
+
+footer left {
+	float: none;
 }
 
 @media all and (min-width: 500px) {
-	.left {	
+	footer .left {	
 	float: left;
 	}
 }
 
 .right {
-	float: none;
+	float: right;
 	font-size: 15px;
 	font-size: 0.95rem;
-	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
-.right li {
+footer .right {
+	float: none;
+	list-style: none;
+}
+
+footer .right li {
 	display: inline-block;
 	padding: 0;
 }
 
 @media all and (min-width: 500px) {
-	.right li {
+	footer .right {
 	float: right;
 	margin: 15px 0 0 10px;
 	}
